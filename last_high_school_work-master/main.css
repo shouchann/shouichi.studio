@@ -1,0 +1,274 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
+    background-image: url(./img/background.png);
+    background-size: 100%;
+}
+body,html{
+    height: 100%;
+}
+@media screen and (min-width: 481px) {
+    header{
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    *{
+        margin:0;
+        padding:0;
+    }
+    .title p{
+        margin: 1em;
+        color: #202020;
+        text-align: center;
+    }
+    ul.menu{
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    ul.menu a{
+        text-decoration: none;
+        color: #202020;
+        font-family: 'PT Sans', sans-serif;
+    }
+    li.item{
+        margin-left: 25px;
+        list-style: none;
+    }
+    .sns{
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sns a{
+        text-decoration: none;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        color: #202020;
+    }
+    /* .absolute{
+  
+        top: 400px;
+    } */
+    .about{
+        margin: 14em 5em 5em 5em;
+    }
+    .about h1{
+        font-size: 60px;
+    }
+    .about h2{
+        margin-top: -20px;
+        font-size: 30px;
+        margin-top: 1em;
+    }
+    .about p{
+        font-family: 'M PLUS 1p', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 1em;
+        color: #202020;
+    }
+    .Web{
+        /* background-color: rgba(234, 225, 207, 0.5); */
+        margin: 0 auto;
+        padding: 0;
+    }
+    .Web p{
+        font-family: 'M PLUS 1p', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+    /*==================================================
+    スライダーのためのcss
+    ===================================*/
+    .slider {
+        width: calc(100vw/1.3);
+        
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        top: 700px;
+        /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+        height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    }
+    
+    .slider-top{
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+    .slider-item01 {
+        background:url(./img/first.png);
+    }
+    
+    .slider-item02 {
+        background:url(./img/izu.png);
+    }
+    
+    .slider-item03 {
+        background:url(./img/esaka.png);
+    }
+    
+    .slider-item04 {
+        background:url(./img/karapo.png);
+    }
+    
+    .slider-item05 {
+        background:url(./img/ao.png);
+    }
+    
+    .slider-item06 {
+        background:url(./img/tekitou.png);
+    }
+    .slider-item {
+        margin: 0;
+        padding: 0;
+        width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+        height: calc(100vh/1.3);
+        background-repeat: no-repeat;/*背景画像をリピートしない*/
+        background-position: center;/*背景画像の位置を中央に*/
+        background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+        list-style: none;
+    }
+    .site_img{
+        width: 50%;
+        height: auto;
+    }
+    .flex{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .flex p{
+        color: #202020;
+        margin-bottom: 1em;
+    }
+    .Bot{
+        margin-top: 10em;
+        margin: 5em;
+    }
+    .Bot img{
+        width: 500px;
+        height: auto;
+        margin-bottom: 1em;
+    }
+    .slack{
+        margin-top: 2em;
+    }
+    img.slack_img{
+        width: 30%;
+        height: auto;
+ 
+    }
+    p.scroll{
+        display: inline-block;
+        position: absolute;
+        right: 40px;
+        bottom: 0;
+        z-index: 2;
+        padding: 10px 10px 88px;
+        overflow: hidden;
+        color: #202020;
+        font-size: 10px;
+        font-family: 'Josefin Sans', sans-serif;
+        line-height: 1;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        writing-mode: vertical-lr;
+    }
+    p.scroll::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        height: 70px;
+        background: #202020;
+        animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+    @keyframes sdl {
+        0% {
+          transform: scale(1, 0);
+          transform-origin: 0 0;
+        }
+        50% {
+          transform: scale(1, 1);
+          transform-origin: 0 0;
+        }
+        50.1% {
+          transform: scale(1, 1);
+          transform-origin: 0 100%;
+        }
+        100% {
+          transform: scale(1, 0);
+          transform-origin: 0 100%;
+        }
+    }
+    .first{
+        margin-top: 60em;
+    }
+    .second,.Third,.Fourth,.Fifth,.Sixth{
+        margin-top: 2em;
+    }
+    .phone-title{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px){
+    ul.menu{
+        display: none;
+    }
+    .pc-title,.pc-sns{
+        display: none;
+    }
+    .title{
+        text-align: center;
+        margin: 20em 0 40em 0;
+    }
+    .about{
+        margin: 0 auto;
+    }
+    i.phone{
+        font-size: 4em;
+        text-decoration: none;
+        color: #202020;
+        margin-left: 0.3em;
+        margin-right: 0.3em;
+    }
+    p.scroll{
+        display: none;
+    }
+    .slider{
+        display: none;
+    }
+    img.site_img{
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    img.slack_title{
+        width: 40%;
+        height: auto;
+    }
+    .slack_img{
+        display: block;
+        width: 50%;
+        height: auto;
+    }
+    #img1,#img3{
+        margin: 0px 0px auto 1em;
+    }
+    #img2{
+        margin: 0px 1em 0px auto;
+    }
+    br{
+        display: none;
+    }
+}
